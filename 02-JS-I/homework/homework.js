@@ -8,8 +8,8 @@ const nuevaString = "hola";
 // Crea una variable numérica, puede ser cualquier número:
 const nuevoNum = 11;
 
-// Crea una variable booleana:
-const nuevoBool = True;
+// Crea una variable booleana:git
+const nuevoBool = true;
 
 // Resuelve el siguiente problema matemático:
 const nuevaResta = 10 - 5 === 5;
