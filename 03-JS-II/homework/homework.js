@@ -189,7 +189,7 @@ function operadoresLogicos(num1, num2, num3) {
   }
   else if (num1 === 0 || num2 === 0 || num3 === 0)
   {
-    return "Erorr"
+    return "Error"
   }
   else 
   {
@@ -215,9 +215,8 @@ function esPrimo(numero) {
     if(numero % i === 0) {
       return false;
     }
-  }
   return true;
-}
+  }
 }
 
 function esVerdadero(valor){
