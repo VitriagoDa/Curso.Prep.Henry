@@ -146,7 +146,9 @@ function diaDeLaSemana(numeroDeDia) {
   if(numeroDeDia === 1 || numeroDeDia === 7 ){
     return "Es fin de semana";
   }
-  return "Es dia Laboral";
+  else{
+    return "Es dia Laboral"
+  }
 } 
 
 
@@ -198,12 +200,13 @@ function  mayorACien( array )  {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu codigo:
-  if(arguments.length < 1) return 0;
-  var total = 1;
-  for(var i = 0; i < arguments.length; i++) {
-    total = total * arguments[i];
+  var nuevoArray = [];
+  for(let i= 0; i < array.length; i++) {
+    if(array[i] > 100) {
+      nuevoArray.push(array[i]);
+    }
   }
-  return total;
+  return nuevoArray;
 }
 
 
@@ -221,7 +224,9 @@ function breakStatement(numero) {
   var suma = numero;
   for(var i= 0; i<10; i++) {
     suma = suma + 2;
-    if(suma === i) break;
+    if(suma === i){
+      break;
+    }
     else {
       array.push(suma);
     }
