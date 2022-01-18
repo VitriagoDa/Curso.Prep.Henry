@@ -104,12 +104,11 @@ function verificarPassword(usuario, password) {
   // Devuelve "true" si coinciden
   // De lo contrario, devuelve "false"
   // // Tu código:
-  if (usuario["password"] === password)
+  if (usuario['password'] === password)
   {
     return true;
   }
-  else 
-  {
+  else {
     return false;
   }
 }
@@ -127,9 +126,12 @@ function agregarAmigo(usuario, nuevoAmigo) {
   // Agrega "nuevoAmigo" al final de ese array
   // Devuelve el objeto "usuario"
   // // Tu código:
-  usuario.amigos.push(nuevoAmigo);
-
-  return usuario;
+  var user = {
+       amigos: ["Daniel","Carlos", "Carla"]
+    }
+    usuario.amigos.push(nuevoAmigo);
+  
+    return usuario;
 }
 
 function pasarUsuarioAPremium(usuarios) {
@@ -138,11 +140,10 @@ function pasarUsuarioAPremium(usuarios) {
   // Define cada propiedad "esPremium" de cada objeto como "true"
   // Devuelve el array de usuarios
   // Tu código:
-  for(var i = 0; i > usuario.length; i++)
-  {
+  for(var i = 0; i < usuarios.length; i++) {
     usuarios[i].esPremium = true;
   }
-  return usuarios; 
+  return usuarios;
 }
 
 function sumarLikesDeUsuario(usuario) {
@@ -153,10 +154,11 @@ function sumarLikesDeUsuario(usuario) {
   // Devuelve la suma
   // Tu código:
   var suma = 0;
-  for(var i = 0; i > usuario.posts.length; i ++)
-  {
+
+  for(var i = 0; i < usuario.posts.length; i++) {
     suma = suma + usuario.posts[i].likes;
   }
+
   return suma;
 }
 
@@ -170,12 +172,11 @@ function agregarMetodoCalculoDescuento(producto) {
   // producto.porcentajeDeDescuento -> 0.2 (o simplemente ".2")
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
   // Tu código:
-  var producto = 
-  {
-    precio: 100,
-    porcentajeDeDescuento: 0.5,
-    calcularPrecioDescuento
-  }
+  var product = {
+     precio: 100,
+     porcentajeDeDescuento: 50,
+     calcularPrecioDescuento
+   };
   producto.calcularPrecioDescuento = function() {
     return this.precio - ( this.precio * this.porcentajeDeDescuento );
   };
