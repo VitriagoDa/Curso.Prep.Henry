@@ -74,7 +74,7 @@ function tieneEmail(usuario) {
   // Devuelve "true" si el usuario tiene un valor definido para la propiedad "email"
   // De lo contratio, devuelve "false"
   // Tu código:
-if(usuario[email])
+if(usuario["email"])
   {
   return true;
   }
@@ -90,13 +90,12 @@ function tienePropiedad(objeto, propiedad) {
   // "propiedad" es un string
   // De lo contrario, devuelve "false"
   // Tu código:
-  if(objeto[key] === "propiedad")
-  {
+  if(objeto[propiedad]) {
     return true;
+  } else {
+      return false;
   }
-  else {
-    return false;
-  }
+  return objeto.hasOwnProperty(propiedad);
 }
 
 function verificarPassword(usuario, password) {
@@ -126,7 +125,7 @@ function agregarAmigo(usuario, nuevoAmigo) {
   // Agrega "nuevoAmigo" al final de ese array
   // Devuelve el objeto "usuario"
   // // Tu código:
-  var user = {
+  var usuario = {
        amigos: ["Daniel","Carlos", "Carla"]
     }
     usuario.amigos.push(nuevoAmigo);
