@@ -6,15 +6,14 @@ function crearGato(nombre, edad) {
   // Agrega un método (funcion) llamado "meow" que devuelva el string "Meow!"
   // Devuelve el objeto
   // Tu código:
-  var objeto =
-  {
-    nombre: "Gato",
-    edad: 3,
-    meow: function(){
+  var obj = {
+    nombre: "nombre",
+    edad: "edad",
+    meow: function() {
       return "Meow!";
     }
-  }
-  return objeto;
+  };
+  return obj;
 }
 
 
@@ -53,8 +52,8 @@ function eliminarPropiedad(objeto, unaPropiedad) {
   // tip: tenes que usar bracket notation
   // Devuelve el objeto
   // Tu código:
-  delete objeto[unaPropiedad];
- 
+  delete objeto[propiedad];
+
   return objeto;
 }
 
@@ -64,10 +63,10 @@ function nuevoUsuario(nombre, email, password) {
   // Tu código:
  var obj =
  {
-   nombre: "Daniel",
-   email: "vitriagodaniel17@gmail.com",
-   password: "156411001" 
- }
+   nombre: Daniel,
+   email: "vitriagodaniel",
+   password: 156411001
+ };
  return obj;
 }
 
@@ -81,7 +80,7 @@ if(usuario["email"])
   }
 else {
   return false;
-}
+  }
 }
 
 
@@ -105,7 +104,7 @@ function verificarPassword(usuario, password) {
   // Devuelve "true" si coinciden
   // De lo contrario, devuelve "false"
   // // Tu código:
-  if (usuario["password"] === password)
+  if (usuario[password] === password)
   {
     return true;
   }
