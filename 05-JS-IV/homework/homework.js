@@ -7,8 +7,8 @@ function crearGato(nombre, edad) {
   // Devuelve el objeto
   // Tu código:
   var obj = {
-    nombre: "nombre",
-    edad: "edad",
+    nombre: nombre,
+    edad: edad,
     meow: function() {
       return "Meow!";
     }
@@ -22,10 +22,8 @@ function agregarPropiedad(objeto, property) {
   // Devuelve el objeto
   // NOTA: El nombre de la propiedad no es "propiedad", el nombre es el valor del argumento llamado "property" (una cadena/string)
   // Tu código:
-  var objeto = {
-    "property": "null"
-  }
-  return objeto
+  objeto[property] = null;
+  return objeto;
 }
 
 function invocarMetodo(objeto, metodo) {
@@ -44,7 +42,9 @@ function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
   {
     numeroMisterioso: 2,
   }
-  return numeroMisterioso * 5;
+  var resultado = objetoMisterioso.numeroMisterioso * 5;
+
+  return resultado;
 }
 
 function eliminarPropiedad(objeto, unaPropiedad) {
@@ -63,9 +63,9 @@ function nuevoUsuario(nombre, email, password) {
   // Tu código:
  var obj =
  {
-   nombre: Daniel,
-   email: "vitriagodaniel",
-   password: 156411001
+   nombre: nombre,
+   email: email,
+   password: password
  };
  return obj;
 }
@@ -74,7 +74,7 @@ function tieneEmail(usuario) {
   // Devuelve "true" si el usuario tiene un valor definido para la propiedad "email"
   // De lo contratio, devuelve "false"
   // Tu código:
-if(usuario["email"])
+if(usuario[email])
   {
   return true;
   }
@@ -104,11 +104,12 @@ function verificarPassword(usuario, password) {
   // Devuelve "true" si coinciden
   // De lo contrario, devuelve "false"
   // // Tu código:
-  if (usuario[password] === password)
+  if (usuario["password"] === password)
   {
     return true;
   }
-  else {
+  else 
+  {
     return false;
   }
 }
@@ -173,11 +174,11 @@ function agregarMetodoCalculoDescuento(producto) {
   {
     precio: 100,
     porcentajeDeDescuento: 0.5,
-    calculadoraDeDescuento
+    calcularPrecioDescuento
   }
-  producto.calculadoraDeDescuento = function (){
-  this.precio - (this.precio * this.porcentajeDeDescuento);
-  }
+  producto.calcularPrecioDescuento = function() {
+    return this.precio - ( this.precio * this.porcentajeDeDescuento );
+  };
   return producto;
 }
 
