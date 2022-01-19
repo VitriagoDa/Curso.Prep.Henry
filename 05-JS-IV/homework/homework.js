@@ -38,10 +38,11 @@ function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
   // "objetoMisterioso" tiene una propiedad llamada "numeroMisterioso"
   // Multiplica el numeroMisterioso por 5 y devuelve el producto
   // Tu código:
-   var objetoMisterioso = {
-   numeroMisterioso: 4
-  }
-  var  resultado  =  objetoMisterioso.numeroMisterioso  *  5 ;
+   var objetoMisterioso =
+   {
+     numeroMisterioso: 4
+   }
+   var resultado = objetoMisterioso.numeroMisterioso * 5;
 
    return resultado;
 }
