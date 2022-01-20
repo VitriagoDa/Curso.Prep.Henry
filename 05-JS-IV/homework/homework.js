@@ -38,10 +38,10 @@ function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
   // "objetoMisterioso" tiene una propiedad llamada "numeroMisterioso"
   // Multiplica el numeroMisterioso por 5 y devuelve el producto
   // Tu código:
-    var objetoMisterioso ={
+    var objetoMiste  ={
       numeroMisterioso: 2
     }
-    var resultado = objetoMisterioso[numeroMisterioso] * 5;
+    var resultado = objetoMiste[numeroMisterioso] * 5;
     return resultado;
 }
 
@@ -169,11 +169,6 @@ function agregarMetodoCalculoDescuento(producto) {
   // producto.porcentajeDeDescuento -> 0.2 (o simplemente ".2")
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
   // Tu código:
-  var producto = {
-     precio: 10,
-     porcentajeDeDescuento: 0.5,
-     calcularPrecioDescuento: 0
-    }
     producto.calcularPrecioDescuento = function() {
     var productoConDescuento = producto.precio - ( producto.precio * producto.porcentajeDeDescuento )
     return productoConDescuento; 
