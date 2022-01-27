@@ -8,11 +8,11 @@ function crearUsuario() {
   // {{nombre}} debe ser el nombre definido en cada instancia
   // Devuelve la clase
   // Tu código:
-  function Usuario(usuario, nombre, email, password){
-    this.usuario = usuario;
-    this.nombre = nombre;
-    this.email = email;
-    this.password = password;
+  function Usuario(opciones){
+    this.usuario = opciones.usuario;
+    this.nombre = opciones.nombre;
+    this.email = opciones.email;
+    this.password = opciones.password;
   }
   let Usuario1 = new Usuario("DanielV", "Daniel", "vitriago@gmail", "15641101" )
 
@@ -26,7 +26,7 @@ function agregarMetodoPrototype(Constructor) {
   // Agrega un método al Constructor del `prototype`
   // El método debe llamarse "saludar" y debe devolver la string "Hello World!"
   // Tu código:
-  Constructor.prototype.saludar = function Saludar(){
+  Constructor.prototype.saludar = function (){
     return "Hello World!";
   }
 }
@@ -37,13 +37,13 @@ function agregarStringInvertida() {
   // Ej: 'menem'.reverse() => menem
   // 'toni'.reverse() => 'inot'
   // Pista: Necesitarás usar "this" dentro de "reverse"
-  String.prototype.reverse = function(){
-    var String = "";
-    for (var i = this.length - 1; i >= 0; i++){
-      StringInvertida = StringInvertida + this.charAt(i)
+  String.prototype.reverse = function() {
+    var stringInvertida = '';
+    for(var i = this.length - 1; i>=0; i--) {
+      stringInvertida = stringInvertida + this.charAt(i);
     }
-    return StringInvertida;
-  }
+    return stringInvertida;
+  };
 }
 
 // ---------------------------------------------------------------------------//
@@ -71,13 +71,13 @@ function agregarStringInvertida() {
       }
     }
 
-function crearInstanciaPersona(nombre, apellido, edad, dir) {
+function crearInstanciaPersona(nombre, apellido, edad, domicilio) {
   //Con esta función vamos a crear una nueva persona a partir de nuestro constructor de persona (creado en el ejercicio anterior)
   //Recibirá los valores "Juan", "Perez", 22, "Saavedra 123" para sus respectivas propiedades
   //Devolver la nueva persona creada
 
-   var persona = new Persona(nombre, apelldo, edad,)
-
+   var persona = new Persona(nombre, apellido, edad, domicilio)
+  return persona;
 }
   
 function agregarMetodo() {
